@@ -9,15 +9,36 @@ function Character(props) {
         <h1>{props.character.name}</h1>
       </div>
       <div className="card-body">
-        <ul>
-          <li>Birth Year: {props.character.birth_year}</li>
-          <li>Eye Color: {props.character.eye_color}</li>
-          <li>Gender: {props.character.gender}</li>
-          <li>Hair Color: {props.character.hair_color}</li>
-          <li>Height: {props.character.height}</li>
-          <li>Mass: {props.character.mass}</li>
-          <li>Skin Color: {props.character.skin_color}</li>
-        </ul>
+        <table class="card-table">
+          <tr>
+            <td>Birth Year:</td>
+            <td>{props.character.birth_year}</td>
+          </tr>
+          <tr>
+            <td>Eye Color:</td>
+            <td>{props.character.eye_color}</td>
+          </tr>
+          <tr>
+            <td>Gender:</td>
+            <td>{props.character.gender}</td>
+          </tr>
+          <tr>
+            <td>Hair Color:</td>
+            <td>{props.character.hair_color}</td>
+          </tr>
+          <tr>
+            <td>Height:</td>
+            <td>{props.character.height}</td>
+          </tr>
+          <tr>
+            <td>Mass:</td>
+            <td>{props.character.mass}</td>
+          </tr>
+          <tr>
+            <td>Skin Color:</td>
+            <td>{props.character.skin_color}</td>
+          </tr>
+        </table>
       </div>
     </div>
   );

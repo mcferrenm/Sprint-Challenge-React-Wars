@@ -3,6 +3,7 @@
 .character-list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 /* Character Card */
@@ -19,6 +20,8 @@
   padding: 50px 1rem;
   display: flex;
   justify-content: center;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
 .card-header h1 {
@@ -31,7 +34,19 @@
   background: #f5f5f5;
 }
 
-.card-body li {
-  font-size: 1.8rem;
+.card-body table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.card-body td,
+th {
+  text-align: left;
+  font-size: 1.6rem;
+  line-height: 1.5;
   color: #212121;
+}
+
+tr:nth-child(even) {
+  background-color: #bdbdbd;
 }
