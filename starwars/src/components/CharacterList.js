@@ -4,7 +4,7 @@ import Character from "./Character";
 
 function CharacterList(props) {
   return (
-    <div>
+    <div className="character-list">
       {props.starwarsChars.map(character => (
         <Character character={character} />
       ))}
