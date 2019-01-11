@@ -8,7 +8,9 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      starwarsChars: []
+      starwarsChars: [],
+      nextPageUrl: "",
+      prevPageUrl: ""
     };
   }
 
@@ -25,9 +27,10 @@ class App extends Component {
         return res.json();
       })
       .then(data => {
-        console.log(data);
         this.setState({
-          starwarsChars: data.results
+          starwarsChars: data.results,
+          nextPageUrl: data.next,
+          prevPageUrl: data.previous
         });
       })
       .catch(err => {
@@ -41,18 +44,10 @@ class App extends Component {
         <div className="header">
           <h1>React Wars</h1>
           <nav>
-            <button
-              onClick={() =>
-                this.getCharacters("https://swapi.co/api/people/?page=1")
-              }
-            >
+            <button onClick={() => this.getCharacters(this.state.prevPageUrl)}>
               Previous
             </button>
-            <button
-              onClick={() =>
-                this.getCharacters("https://swapi.co/api/people/?page=2")
-              }
-            >
+            <button onClick={() => this.getCharacters(this.state.nextPageUrl)}>
               Next
             </button>
           </nav>

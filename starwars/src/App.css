@@ -141,7 +141,6 @@ body {
   padding: 0;
   font-family: sans-serif;
   background-image: url("./sw-bg.jpg");
-  background-size: cover;
 }
 
 h1 {
@@ -170,6 +169,9 @@ h1 {
 .header button {
   padding: 15px 3rem;
   align-self: flex-end;
-  width: 10rem;
+  width: 15rem;
   margin: 1rem;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: #212121;
 }
